@@ -27,10 +27,13 @@
     SUAppRater *rater = [SUAppRater sharedInstance];
     rater.title = @"Notice";
     rater.message = @"Enjoy the App? Please rate it!";
-    rater.rate = @"Rating now";
-    rater.cancel = @"Maybe next time";
-    rater.scene = SURateInStore;
+    rater.rate = @"Rate now";
+    rater.cancel = @"Next time";
     [rater showRatingAlertIn:self];
+
+    /** Use cutom UI
+    [rater goToRateTheAppIn:self];
+     */
 }
 
 - (void)didReceiveMemoryWarning

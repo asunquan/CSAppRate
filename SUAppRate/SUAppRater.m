@@ -10,6 +10,16 @@
 
 #import <StoreKit/StoreKit.h>
 
+/**
+ *     iOS system version < 7.0 use this url
+ */
+static NSString *const SUiOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@&pageNumber=0&sortOrdering=2&mt=8";
+
+/**
+ *     iOS system version >= 7.0 use this url
+ */
+static NSString *const SUiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.com/app/id%@";
+
 @interface SUAppRater () <SKStoreProductViewControllerDelegate>
 
 @end
@@ -49,17 +59,19 @@ static SUAppRater *_instance = nil;
                                                                 preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *rateAct = [UIAlertAction actionWithTitle:self.rate
-                                                          style:UIAlertActionStyleDefault
+                                                          style:UIAlertActionStyleCancel
                                                         handler:^(UIAlertAction * _Nonnull action) {
                                                             
                                                             [self goToRateTheAppIn:viewController];
                                                             
                                                         }];
+        
         UIAlertAction *cancelAct = [UIAlertAction actionWithTitle:self.cancel
-                                                            style:UIAlertActionStyleCancel
+                                                            style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * _Nonnull action) {
                                                               
                                                           }];
+        
         [alert addAction:rateAct];
         [alert addAction:cancelAct];
         
@@ -80,6 +92,8 @@ static SUAppRater *_instance = nil;
     }
     return YES;
 }
+
+// Rate logic
 
 - (void)goToRateTheAppIn:(UIViewController *)viewController
 {
@@ -120,12 +134,14 @@ static SUAppRater *_instance = nil;
 {
     if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
     {
-        NSString *openUrl = [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", self.appID];
+        NSString *openUrl = [NSString stringWithFormat:SUiOSAppStoreURLFormat, self.appID];
+        NSLog(@"open url : %@", openUrl);
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:openUrl]];
     }
     else
     {
-        NSString *openUrl = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", self.appID];
+        NSString *openUrl = [NSString stringWithFormat:SUiOS7AppStoreURLFormat, self.appID];
+        NSLog(@"open url : %@", openUrl);
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:openUrl]];
     }
 }

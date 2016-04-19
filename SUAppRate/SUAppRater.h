@@ -37,6 +37,8 @@ typedef NS_ENUM(NSUInteger, SURateScene) {
  */
 - (void)showRatingAlertIn:(UIViewController *)viewController;
 
+#pragma mark - Must be setted
+
 /**
  *     The AppID which is in App Store
  */
@@ -68,5 +70,15 @@ typedef NS_ENUM(NSUInteger, SURateScene) {
  *     The title of cacel button
  */
 @property (nonatomic, copy, readwrite) NSString *cancel;
+
+#pragma mark - Only use API
+
+/**
+ *     Go to rate the App
+ *
+ *     @param viewController (UIViewController *) rating in app needed
+ */
+- (void)goToRateTheAppIn:(UIViewController *)viewController;
+
 
 @end
