@@ -28,7 +28,7 @@
     rater.title = @"Notice";
     rater.message = @"Enjoy the App? Please rate it!";
     rater.rate = @"Rate now";
-    rater.cancel = @"Next time";
+    rater.cancel = @"No thanks";
     [rater showRatingAlertIn:self];
 
     /** Use cutom UI

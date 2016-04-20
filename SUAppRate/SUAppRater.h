@@ -33,6 +33,14 @@ typedef NS_ENUM(NSUInteger, SURateScene) {
 + (SUAppRater *)sharedInstance;
 
 /**
+ *     The method must be used to set appID and rating scene
+ *
+ *     @param appID The appID in App Store
+ *     @param scene Rating scene
+ */
+- (void)setRaterAppID:(NSString *)appID scene:(SURateScene)scene;
+
+/**
  *     Show Rating AlertView
  */
 - (void)showRatingAlertIn:(UIViewController *)viewController;

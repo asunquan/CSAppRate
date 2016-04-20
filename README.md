@@ -15,6 +15,12 @@ Use this method set the property of scene:
 
 [[SUAppRater sharedInstance] setScene:SURateInApp];
 
+@2016/4/20 15:28
+
+You can use this method instead of twice setter method:
+
+[[SUAppRater sharedInstance] setRaterAppID:@"824104400" scene:SURateInApp];
+
 
 Then you can use the app rater.
 

@@ -21,8 +21,7 @@
 {
     // Override point for customization after application launch.
     
-    [[SUAppRater sharedInstance] setAppID:@"824104400"];
-    [[SUAppRater sharedInstance] setScene:SURateInApp];
+    [[SUAppRater sharedInstance] setRaterAppID:@"824104400" scene:SURateInApp];
     
     return YES;
 }

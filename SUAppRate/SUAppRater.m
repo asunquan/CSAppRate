@@ -50,6 +50,12 @@ static SUAppRater *_instance = nil;
 
 #pragma mark -
 
+- (void)setRaterAppID:(NSString *)appID scene:(SURateScene)scene
+{
+    self.appID = appID;
+    self.scene = scene;
+}
+
 - (void)showRatingAlertIn:(id)viewController
 {
     if ([self isAppIDSetted])
