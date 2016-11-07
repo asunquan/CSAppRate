@@ -1,8 +1,8 @@
 //
 //  main.m
-//  SUAppRateDemo
+//  CSAppRateDemo
 //
-//  Created by Suns孙泉 on 16/4/1.
+//  Created by Suns孙泉 on 2016/11/7.
 //  Copyright © 2016年 cyou-inc.com. All rights reserved.
 //
 

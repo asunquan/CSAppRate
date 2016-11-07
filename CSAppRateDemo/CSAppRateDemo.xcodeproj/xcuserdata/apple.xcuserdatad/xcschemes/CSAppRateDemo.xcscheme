@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1887233B1CAE5A27004B20F9"
-               BuildableName = "SUAppRateDemo.app"
-               BlueprintName = "SUAppRateDemo"
-               ReferencedContainer = "container:SUAppRateDemo.xcodeproj">
+               BlueprintIdentifier = "18A5D9F31DD05D6A00EE58F8"
+               BuildableName = "CSAppRateDemo.app"
+               BlueprintName = "CSAppRateDemo"
+               ReferencedContainer = "container:CSAppRateDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,34 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "188723541CAE5A27004B20F9"
-               BuildableName = "SUAppRateDemoTests.xctest"
-               BlueprintName = "SUAppRateDemoTests"
-               ReferencedContainer = "container:SUAppRateDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1887235F1CAE5A27004B20F9"
-               BuildableName = "SUAppRateDemoUITests.xctest"
-               BlueprintName = "SUAppRateDemoUITests"
-               ReferencedContainer = "container:SUAppRateDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1887233B1CAE5A27004B20F9"
-            BuildableName = "SUAppRateDemo.app"
-            BlueprintName = "SUAppRateDemo"
-            ReferencedContainer = "container:SUAppRateDemo.xcodeproj">
+            BlueprintIdentifier = "18A5D9F31DD05D6A00EE58F8"
+            BuildableName = "CSAppRateDemo.app"
+            BlueprintName = "CSAppRateDemo"
+            ReferencedContainer = "container:CSAppRateDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1887233B1CAE5A27004B20F9"
-            BuildableName = "SUAppRateDemo.app"
-            BlueprintName = "SUAppRateDemo"
-            ReferencedContainer = "container:SUAppRateDemo.xcodeproj">
+            BlueprintIdentifier = "18A5D9F31DD05D6A00EE58F8"
+            BuildableName = "CSAppRateDemo.app"
+            BlueprintName = "CSAppRateDemo"
+            ReferencedContainer = "container:CSAppRateDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1887233B1CAE5A27004B20F9"
-            BuildableName = "SUAppRateDemo.app"
-            BlueprintName = "SUAppRateDemo"
-            ReferencedContainer = "container:SUAppRateDemo.xcodeproj">
+            BlueprintIdentifier = "18A5D9F31DD05D6A00EE58F8"
+            BuildableName = "CSAppRateDemo.app"
+            BlueprintName = "CSAppRateDemo"
+            ReferencedContainer = "container:CSAppRateDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

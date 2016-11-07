@@ -1,36 +1,38 @@
 //
-//  SUAppRate.h
-//  SUAppRateDemo
+//  CSAppRate.h
+//  CSAppRateDemo
 //
-//  Created by Suns孙泉 on 16/4/1.
+//  Created by Suns孙泉 on 2016/11/7.
 //  Copyright © 2016年 cyou-inc.com. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
 #import <UIKit/UIKit.h>
 
 /**
  *     Rating Scene Enum
  */
-typedef NS_ENUM(NSUInteger, SURateScene) {
+typedef NS_ENUM(NSUInteger, CSRateScene)
+{
     /**
      *     Rating in App
      */
-    SURateInApp,
+    CSRateInApp,
     /**
      *     Rating by turning into App Store
      */
-    SURateInStore
+    CSRateInStore
 };
 
-@interface SUAppRater : NSObject
+@interface CSAppRate : NSObject
 
 /**
  *     Create single instance
  *
  *     @return single instance
  */
-+ (SUAppRater *)sharedInstance;
++ (CSAppRate *)sharedInstance;
 
 /**
  *     The method must be used to set appID and rating scene
@@ -38,12 +40,12 @@ typedef NS_ENUM(NSUInteger, SURateScene) {
  *     @param appID The appID in App Store
  *     @param scene Rating scene
  */
-- (void)setRaterAppID:(NSString *)appID scene:(SURateScene)scene;
++ (void)setRaterAppID:(NSString *)appID scene:(CSRateScene)scene;
 
 /**
  *     Show Rating AlertView
  */
-- (void)showRatingAlertIn:(UIViewController *)viewController;
++ (void)showRatingAlertIn:(UIViewController *)viewController;
 
 #pragma mark - Must be setted
 
@@ -55,7 +57,7 @@ typedef NS_ENUM(NSUInteger, SURateScene) {
 /**
  *     Rating Scene
  */
-@property (nonatomic, assign) SURateScene scene;
+@property (nonatomic, assign) CSRateScene scene;
 
 #pragma mark - Use iOS alertView
 
@@ -86,7 +88,6 @@ typedef NS_ENUM(NSUInteger, SURateScene) {
  *
  *     @param viewController (UIViewController *) rating in app needed
  */
-- (void)goToRateTheAppIn:(UIViewController *)viewController;
-
++ (void)goToRateTheAppIn:(UIViewController *)viewController;
 
 @end

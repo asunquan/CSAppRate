@@ -1,39 +1,51 @@
-# SUAppRate
-Ask users to rate your app in App Store. 询问用户去App Store评价你的应用
+# CSAppRate
+##### Ask users to rate your app in App Store.
 
+##### 询问用户去App Store评价你的应用
 
-First you must set your AppID which has setted in Apple App Store.
+##### First you must set your <font color=#DC143C>AppID</font> which has setted in Apple App Store.
 
-Use this method set the property of AppID:
+##### Use this method set the property of AppID:
 
-[[SUAppRater sharedInstance] setAppID:@"824104400"];
+```objective-c
+[CSAppRate sharedInstance].appID = @"YOURAPPID";
+```
 
+##### Second you must set the property of scene which is a enum named CSRateScene, in this enum there's 2 types, CSRateInApp means rating in your app, CSRateInStore means rating your app by turning into Apple App Store.
 
-Second you must set the property of scene which is a enum named SURateScene, in this enum there's 2 types, SURateInApp means rating in your app, SURateInStore means rating your app by turning into Apple App Store.
+##### Use this method set the property of scene:
 
-Use this method set the property of scene:
+```objective-c
+[CSAppRate sharedInstance].scene = CSRateInApp;
+```
 
-[[SUAppRater sharedInstance] setScene:SURateInApp];
+##### You can use this method instead of twice setter method:
 
-@2016/4/20 15:28
+```objective-c
+[CSAppRate setRaterAppID:@"YOURAPPID" scene:CSRateInApp];
+```
 
-You can use this method instead of twice setter method:
+##### Then you can use the app rater.
 
-[[SUAppRater sharedInstance] setRaterAppID:@"824104400" scene:SURateInApp];
+##### You can use iOS common alert through these codes:
 
+```objective-c
+CSAppRate *instance = [CSAppRate sharedInstance];
 
-Then you can use the app rater.
+instance.title = @"Notice";
+instance.message = @"Enjoy the App? Please rate it!";
+instance.rate = @"Rate now";
+instance.cancel = @"Next time";
 
-You can use iOS common alert through these codes:
+[CSAppRate showRatingAlertIn:viewController];
+```
 
-SUAppRater *rater = [SUAppRater sharedInstance];
-rater.title = @"Notice";
-rater.message = @"Enjoy the App? Please rate it!";
-rater.rate = @"Rate now";
-rater.cancel = @"Next time";
-[rater showRatingAlertIn:self];
+##### It is a UIAlertView below iOS 8 and a UIAlertController above iOS 8.
 
+##### Or you can use your custom UI, just use rating API:
 
-Or you can use your custom UI, just use rating API:
+```objective-c
+[CSAppRate goToRateTheAppIn:viewController];
+```
 
-[rater goToRateTheAppIn:self];
+#### And now It supports iOS 10!

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SUAppRateDemo.xcscheme</key>
+		<key>CSAppRateDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1887233B1CAE5A27004B20F9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>188723541CAE5A27004B20F9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1887235F1CAE5A27004B20F9</key>
+		<key>18A5D9F31DD05D6A00EE58F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
