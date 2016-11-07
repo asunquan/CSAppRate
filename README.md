@@ -3,7 +3,7 @@
 
 ##### 询问用户去App Store评价你的应用
 
-##### First you must set your <font color=##DC143C#>AppID</font> which has setted in Apple App Store.
+##### First you must set your <font color="#DC143C">AppID</font> which has setted in Apple App Store.
 
 ##### Use this method set the property of AppID:
 
